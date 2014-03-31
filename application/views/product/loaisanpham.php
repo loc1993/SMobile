@@ -4,12 +4,13 @@
             <!--SIDE NAV STARTS-->
             <div id="side_nav">
                 <div class="sideNavCategories">
-                    <h1><?=$TenLoai->TEN?></h1>
+                    <h1><?=$TenLoai->TEN?><h3 style="font-size:15pt; float:right"><?=$TenNhaCungCap?></h3></h1>
+                    <div class="clear"></div>
                     <ul class="category departments">
                         <li class="header"><?=lang('nhacungcap') ?></li>
                        <?php foreach ($NhaCungCap as $item_ncc) {
                           ?>
-                            <li><a href="<?=base_url()?>product/nhacungcap/<?=$item_ncc->ID ?>"><?=$item_ncc->TENNCC?></a></li>
+                            <li><a href="<?=base_url()?>sanpham/nhacungcap/<?=$item_ncc->ID?>-<?=$idLoai?>"><?=$item_ncc->TENNCC?></a></li>
                           <?php
                        } ?>                       
                     </ul>
@@ -26,9 +27,9 @@
             <div id="main_content">
                 <div class="category_banner"> <img src="<?=base_url()?>static/images/promo_cat_banner.jpg"/> </div>
                 <ul class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="leisure_listing.html">Women</a></li>
-                    <li class="active"><a href="#">Shirts & Blouses</a></li>
+                    <li><a href="<?=base_url()?>">Home</a></li> 
+                    <li><a href="<?=base_url()?>sanpham/loaisanpham/<?=$idLoai?>"><?=$TenLoai->TEN?></a></li>                
+                    <li class="active"><a href="#"><?=$TenNhaCungCap->TEN?></a></li>
                 </ul>
                 <!--Toolbar-->
                 <div class="toolbar">

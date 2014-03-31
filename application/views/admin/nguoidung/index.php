@@ -3,8 +3,8 @@
       <div class="row">
 
       <ul class="nav nav-tabs">
-          <li class="active"><a href="#home" data-toggle="tab"><strong>Danh sách nhân viên</strong></a></li>
-          <li><a href="#profile" data-toggle="tab"><strong>Thêm nhân viên</strong></a></li>
+          <li class="active"><a href="#home" data-toggle="tab"><strong>Danh sách người dùng</strong></a></li>
+          <li><a href="#profile" data-toggle="tab"><strong>Thêm người dùng</strong></a></li>
       </ul>
 
         <div class="tab-content mb30">
@@ -12,7 +12,7 @@
             <div class="row">
             
                <div class="clearfix mb30"></div>
-          <h5 class="subtitle mb5">Danh sách nhân viên</h5>
+          <h5 class="subtitle mb5">Danh sách người dùng</h5>
            <div class="alert alert-danger msgalert" style=" display:none;">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <strong>Có lỗi!</strong> Dữ liệu đang được sử dụng!
@@ -76,28 +76,28 @@
               <div class="panel-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Họ và tên <span class="asterisk">*</span></label>
-                  <div class="col-sm-6">
-                    <input type="text" name="hoten" class="form-control" id="hoten" placeholder="Điền tên..." required />
+                  <div class="col-sm-6">                    
+                    <input type="text" name="hoten" id="hoten" title="Điền họ tên đầu đủ!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" required/>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tên đăng nhập <span class="asterisk">*</span></label>
                   <div class="col-sm-6">
-                    <input type="text" name="username" class="form-control" id="username" placeholder="Điền tên đăng nhập..." required />
+                    <input type="text" name="username" title="Điền tên đăng nhập!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" id="username" required />
                   </div>
                 </div>      
 
                  <div class="form-group">
                   <label class="col-sm-2 control-label">Mật khẩu <span class="asterisk">*</span></label>
                   <div class="col-sm-6">
-                    <input type="password" name="password" class="form-control" id="password" placeholder="Điền mật khẩu..." required />
+                    <input type="password" name="password" title="Điền mật khẩu!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" id="password" required />
                   </div>
                 </div>    
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Email <span class="asterisk">*</span></label>
                   <div class="col-sm-6">
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Điền email..." required />
+                    <input type="email" name="email" id="email" title="Điền địa chỉ email!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" required />
                   </div>
                 </div>
 
@@ -105,7 +105,7 @@
                   <label class="col-sm-2 control-label">Ngày sinh<span class="asterisk">*</span></label>
                   <div class="col-sm-4">
                      <div class="input-group">
-                      <input name="namsinh" type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker" required>
+                      <input name="namsinh" type="text" title="Chọn ngày sinh!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" placeholder="mm/dd/yyyy" id="datepicker" required>
                       <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                     </div>
                   </div>
@@ -129,14 +129,14 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">CMND <span class="asterisk">*</span></label>
                   <div class="col-sm-6">
-                    <input name="CMND" class="form-control" id="CMND" placeholder="Điền CMND ..." required></input>
+                    <input name="CMND" title="Điền số chứng minh nhân dân!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" id="CMND" required></input>
                   </div>
                 </div>          
 
                   <div class="form-group">
                   <label class="col-sm-2 control-label">Số điện thoại <span class="asterisk">*</span></label>
                   <div class="col-sm-6">
-                    <input name="SDT" class="form-control" id="SDT" placeholder="Điền số điện thoại ..." required></input>
+                    <input name="SDT" title="Điền số điện thoại!" data-toggle="tooltip" data-trigger="hover" class="form-control tooltips" id="SDT" required></input>
                   </div>
                 </div>        
                 
@@ -146,7 +146,7 @@
                     <select id="fruits" name="quyen" class="form-control " required="">
                       <option value="">Chọn quyền</option>   
                       <option value="1">Quản lý</option> 
-                      <option value="2">Nhân viên</option>
+                      <option value="2">người dùng</option>
                       <option value="3">Khách hàng</option>                     
                     </select>
                   </div>
